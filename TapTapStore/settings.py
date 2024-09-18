@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-jgecnlbpya1i(pntc$(z-x7e6ays+v2&6u2!!1ro56qq=gp!ix
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "muhammad-ghathaf-taptapstore.pbp.cs.ui.ac.id"]
 
 # Application definition
 
