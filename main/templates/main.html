@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Bram Music Shop</h1>
+<h1>TapTapStore</h1>
 
 <h5>NPM: </h5>
 <p>{{ npm }}<p>
@@ -9,8 +9,8 @@
 <h5>Class: </h5>
 <p>{{ class }}<p>
 
-{% if not product_entries %}
-<p>Belum ada data product yang dijual pada Bram Music Shop.</p>
+{% if not list_of_products %}
+<p>Belum ada data produk yang dijual.</p>
 {% else %}
 <table>
   <tr>
@@ -22,7 +22,7 @@
 
   {% comment %} Berikut cara memperlihatkan data produk di bawah baris ini 
   {% endcomment %} 
-  {% for product_entry in product_entries %}
+  {% for product_entry in list_of_products %}
   <tr>
     <td>{{product_entry.name}}</td>
     <td>{{product_entry.price}}</td>
@@ -36,6 +36,12 @@
 <br />
 
 <a href="{% url 'main:create_product' %}">
-  <button>Add New Music Product</button>
+  <button>Tambahkan Produk</button>
 </a>
+
+<a href="{% url 'main:logout' %}">
+  <button>Logout</button>
+</a>
+
+<h5>Sesi terakhir login: {{ last_login }}</h5>
 {% endblock content %}
