@@ -1,3 +1,4 @@
+
 {% extends 'base.html' %}
 
 {% block meta %}
@@ -5,10 +6,10 @@
 {% endblock meta %}
 
 {% block content %}
-<div class="min-h-screen flex items-center justify-center bg-slate-100 py-12 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-md w-full space-y-8 form-style">
+<div class="min-h-screen flex items-center justify-center bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-md w-full space-y-8">
     <div>
-      <h2 class="mt-6 text-center text-3xl font-extrabold text-black">
+      <h2 class="mt-6 text-center text-3xl font-extrabold text-white">
         Create your account
       </h2>
     </div>
@@ -18,7 +19,7 @@
       <div class="rounded-md shadow-sm -space-y-px">
         {% for field in form %}
           <div class="{% if not forloop.first %}mt-4{% endif %}">
-            <label for="{{ field.id_for_label }}" class="mb-2 font-semibold text-black">
+            <label for="{{ field.id_for_label }}" class="mb-2 font-semibold text-white">
               {{ field.label }}
             </label>
             <div class="relative">
@@ -41,9 +42,7 @@
       </div>
 
       <div>
-        <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo
-        
-        -700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
           Register
         </button>
       </div>
@@ -60,9 +59,9 @@
     {% endif %}
 
     <div class="text-center mt-4">
-      <p class="text-sm text-black">
+      <p class="text-sm text-white">
         Already have an account?
-        <a href="{% url 'main:login' %}" class="font-medium text-indigo-200 hover:text-indigo-300">
+        <a href="{% url 'main:login' %}" class="font-medium text-red-400 hover:text-red-500">
           Login here
         </a>
       </p>

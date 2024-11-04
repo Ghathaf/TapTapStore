@@ -1,5 +1,7 @@
 from django.forms import ModelForm
 from main.models import Product
+
+#Tugas 6
 from django.utils.html import strip_tags
 
 class ProductForm(ModelForm):
